@@ -2,6 +2,7 @@ package us.jlp;
 
 /**
  * Controls and runs every aspect of the program
+ * Manages the players
  */
 public class Game {
 
