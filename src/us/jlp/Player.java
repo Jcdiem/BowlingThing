@@ -14,7 +14,7 @@ public void bowl(int eventNum)
             EventList.doOpen(3);
             break;
         case 2:
-            EventList.doStrike(3);
+            EventList.doStrike();
             break;
         case 3:
             EventList.doSpare(3);
