@@ -23,10 +23,17 @@ public class Set{
         currentFrame++;
     }
 
-    public int getCurrentTotal(){
+    /**
+     * Gets the total score for the game so far
+     * @return Returns the total for that moment in the game
+     */
+    public int getCurrentTotal(){//TODO: Finish tallying for turkeys
         int runningTotal = 0;
         for (Frame f : frameList){
-            runningTotal =+ f.getScore();
+            if (f.getType().equals(Event.STRIKE)){
+
+            }
+            else runningTotal =+ f.getScore();
         }
         return runningTotal;
     }
