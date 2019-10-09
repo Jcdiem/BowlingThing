@@ -6,21 +6,20 @@ public class Player
 
 
 
-public int bowl(int eventNum)
+public void bowl(int eventNum)
 {
 
     switch(eventNum) {
         case 1:
-            EventList.doOpen();
+            EventList.doOpen(3);
             break;
         case 2:
-            EventList.doStrike();
+            EventList.doStrike(3);
             break;
         case 3:
-            EventList.doSpare();
+            EventList.doSpare(3);
             break;
     }
-
 
 }
 

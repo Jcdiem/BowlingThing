@@ -3,15 +3,17 @@ package us.jlp;
 public class EventList
 {
 
-    public static void doOpen(int pins) //open score is pins
+    public static Frame doOpen(int pins) //open score is pins
     {
-        Frame Frame = new Frame();
+        Frame frame = new Frame(pins, Event.OPEN);
+        return frame;
 
     }
 
-    public static void doStrike() //Strike will always be score 10
+    public static Frame doStrike() //Strike will always be score 10
     {
-
+        Frame frame = new Frame(12, Event.STRIKE)
+        return frame;
     }
 
     public static Frame doSpare(int pins)
