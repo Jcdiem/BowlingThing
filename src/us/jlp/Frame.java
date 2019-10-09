@@ -8,7 +8,7 @@ public class Frame {
     private int score;
 
     /**
-     * @param endingScore Ending score player got for that frame
+     * @param endingScore Ending score player got for that frame (Every strike is counted as a 10 score)
      * @param event How the frame ended (Can only be spare, open or strike)
      */
     public Frame(int endingScore, Event event){
