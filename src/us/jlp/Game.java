@@ -6,6 +6,10 @@ package us.jlp;
 public class Game {
 
     public static void main(String[] args) {
-	// write your code here
+	    simulateGame();
+    }
+
+    private static void simulateGame(){
+        //TODO: Add paramters to run a pretend game through the command line
     }
 }
