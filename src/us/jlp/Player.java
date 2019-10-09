@@ -2,7 +2,7 @@ package us.jlp;
 
 public class Player
 {
-    new Set Set();
+    Set set = new Set();
 
 }
 
