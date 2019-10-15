@@ -4,7 +4,7 @@ import java.nio.file.AccessDeniedException;
 import java.util.Arrays;
 
 /**
- * Manages a player's sets and keeps track of strikes' scores (like turkeys0
+ * Manages a player's sets and keeps track of strikes' scores (like turkeys)
  */
 public class Set{
     private static final int GAMELENGTH = 10;
@@ -28,7 +28,7 @@ public class Set{
      * Gets the total score for the game so far
      * @return Returns the total for that moment in the game
      */
-    public int getCurrentTotal(){//TODO: Finish tallying for turkeys
+    public int getCurrentTotal(){
         int runningTotal = 0;
         for (Frame f : frameList){
             if (f.getType().equals(Event.STRIKE) && f.getScore() == 10){ //If frame is unedited and strike/spare

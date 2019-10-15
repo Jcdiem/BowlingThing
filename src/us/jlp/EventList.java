@@ -1,5 +1,9 @@
 package us.jlp;
 
+/**
+ * Updates player frame based on event (Open, Strike, or Spare)
+ */
+
 public class EventList
 {
 
