@@ -1,13 +1,14 @@
 package us.jlp;
 
-import javax.swing.event.InternalFrameListener;
 import java.nio.file.AccessDeniedException;
+import java.util.Arrays;
 
 /**
  * Manages a player's sets and keeps track of strikes' scores (like turkeys0
  */
 public class Set{
-    private Frame[] frameList = new Frame[10]; //Assuming standard game of bowling
+    private static final int GAMELENGTH = 10;
+    private Frame[] frameList = new Frame[GAMELENGTH]; //Assuming standard game of bowling
     private int currentFrame = 0;
 
     /**
@@ -30,10 +31,25 @@ public class Set{
     public int getCurrentTotal(){//TODO: Finish tallying for turkeys
         int runningTotal = 0;
         for (Frame f : frameList){
-            if (f.getType().equals(Event.STRIKE)){
-
+            if (f.getType().equals(Event.STRIKE) && f.getScore() == 10){ //If frame is unedited and strike/spare
+                int scoreRun = 0;
+                int fStart = Arrays.asList(frameList).indexOf(f);
+                //TODO: Try and fix the for loop to be more readable
+                for (int i = fStart++;i - fStart >= 2; i++){ //Adds frames infront of a strike
+                    scoreRun += frameList[i].getScore();
+                    if(i >= GAMELENGTH) break;//Exit the loop if about to break
+                }
+                //Try adding score
+                try {
+                    f.addScore(scoreRun);
+                }
+                catch (AccessDeniedException e) {
+                    System.out.println("Non spare/strike frame was edited, frame not changed");
+                }
+                //Add to the running total
+                runningTotal += f.getScore();
             }
-            else runningTotal =+ f.getScore();
+            else runningTotal += f.getScore();
         }
         return runningTotal;
     }
