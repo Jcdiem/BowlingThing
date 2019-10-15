@@ -16,7 +16,7 @@ public class EventList
 
     public static Frame doStrike() //Strike will always be score 10
     {
-        Frame frame = new Frame(10, Event.STRIKE);
+        Frame frame = new Frame(12, Event.STRIKE)
         return frame;
     }
 
