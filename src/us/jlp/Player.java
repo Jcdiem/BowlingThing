@@ -9,7 +9,7 @@ public class Player
 public void bowl(int eventNum)
 {
 
-    switch(eventNum) { //TODO: You should add some data checking here
+    switch(eventNum) {
         case 1:
             EventList.doOpen(3);
             break;

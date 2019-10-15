@@ -35,9 +35,9 @@ public class Set{
                 int scoreRun = 0;
                 int fStart = Arrays.asList(frameList).indexOf(f);
                 //TODO: Try and fix the for loop to be more readable
-                for (int i = fStart++;i - fStart <= 2; i++){ //Adds frames infront of a strike
-                    if(i >= GAMELENGTH) break;//Exit the loop if about to break
+                for (int i = fStart++;i - fStart >= 2; i++){ //Adds frames infront of a strike
                     scoreRun += frameList[i].getScore();
+                    if(i >= GAMELENGTH) break;//Exit the loop if about to break
                 }
                 //Try adding score
                 try {
