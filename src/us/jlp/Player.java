@@ -11,7 +11,7 @@ public class Player
      * @throws AccessDeniedException thrown when given a number not in the event list
      */
 
-public void bowl(int eventNum) throws AccessDeniedException {
+public void bowl(int eventNum) throws AccessDeniedException {//TODO: Add set and add frames from events to set
 
     switch(eventNum) {
         case 1:
