@@ -15,19 +15,24 @@ public void bowl(int eventNum) throws AccessDeniedException {//TODO: Add set and
 
     switch(eventNum) {
         case 1:
-            EventList.doOpen(3);
+            set.addFrame(EventList.doOpen(3));
             break;
         case 2:
-            EventList.doStrike();
+            set.addFrame(EventList.doStrike());
             break;
         case 3:
-            EventList.doSpare(3);
+            set.addFrame(EventList.doSpare(3));
             break;
         default:
             throw new AccessDeniedException("Event should be 1, 2 or 3.");
     }
-
-
 }
+
+
+public int getScore()
+{
+    return set.getCurrentTotal();
+}
+
 
 }
